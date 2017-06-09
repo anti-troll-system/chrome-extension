@@ -1,17 +1,17 @@
-# PATROLL.org Chrome extension
+# PATROLL Chrome extension
 
-Rozšírenie pre prehliadaè Chrome
+RozÅ¡Ã­renie pre prehliadaÄ Chrome pre sluÅ¾bu www.patroll.org
 
-## Ako nainštalova rozšírenie do prehliadaèa
+## Ako nainÅ¡talovaÅ¥ rozÅ¡Ã­renie do prehliadaÄa
 
-### Inštalácia (pre developerov)
+### InÅ¡talÃ¡cia (pre developerov)
 
-- otvor v prehliadaèi Chrome adresu [chrome://extensions/](chrome://extensions/)
-- zaškrtni checkbox "Developer mode"
-- stlaè tlaèítko "Load unpacked extension" a nabrowsuj adresár tohto projektu
-- rozšírenie bude pridané do zoznamu ako "PATROLL for better discussions"
+- otvor v prehliadaÄi Chrome adresu [chrome://extensions/](chrome://extensions/)
+- zaÅ¡krtni checkbox "Developer mode"
+- stlaÄ tlaÄÃ­tko "Load unpacked extension" a nabrowsuj adresÃ¡r tohto projektu
+- rozÅ¡Ã­renie bude pridanÃ© do zoznamu ako "PATROLL for better discussions"
 
 ### Spustenie
 
-- navštívte stránku facebook.com
-- v diskusiách pri pouívate¾och sa vám zaène zobrazova ikonka PATROLL so štatistikou o danom pouívate¾ovi
+- navÅ¡tÃ­vte strÃ¡nku facebook.com
+- v diskusiÃ¡ch pri pouÅ¾Ã­vateÄ¾och sa vÃ¡m zaÄne zobrazovaÅ¥ ikonka PATROLL so Å¡tatistikou o danom pouÅ¾Ã­vateÄ¾ovi
