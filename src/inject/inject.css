@@ -1,3 +1,328 @@
 /**
  * Place your custom CSS styles here.
  **/
+
+ 
+ 
+.UFIComment[patrolled] .lfloat {
+	position: relative;
+}
+ 
+ 
+.patroll-icon {
+	/* 
+	$w: 14;
+	$h: 20;
+	*/
+	position: absolute;
+	left: -16px;  /* -$w-2 */
+	bottom: 50%;
+	margin-bottom: -10px;  /* -$h/2 */
+	width: 14px;	/* $w */
+	height: 20px;  /* $h */
+	background: white;
+	z-index: 1;
+	cursor: pointer;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+	transition-duration: 1.5s;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+.patroll-icon.blank {
+	/* 
+	$w: 12;
+	$h: 12;
+	*/
+	left: -15px;  /* -$w-2 */
+	margin-bottom: -6px;  /* -$h/2 */
+	width: 12px;	/* $w */
+	height: 12px;  /* $h */
+	box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.patroll-icon.unknown {
+	/* 
+	$w: 10;
+	$h: 10;
+	*/
+	left: -15px;  /* -$w-2 */
+	margin-bottom: -5px;  /* -$h/2 */
+	width: 10px;	/* $w */
+	height: 10px;  /* $h */
+	background-color: #e9ebed;
+	box-shadow: none;
+	border: 1px solid #dddfe2;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.patroll-icon.blank *,
+.patroll-icon.unknown * {
+	display: none;
+}
+
+.patroll-icon.inicializing {
+	opacity: 0;
+	transform: translate3d(0,0,0) scale(0.001);
+}
+
+.patroll-icon.bounceIn {
+	animation-name: bounceIn;
+	animation-duration: 1s;
+}
+
+	.patroll-icon [class^="level"] {
+		box-sizing: border-box;
+		position: absolute;
+		left: 1px;
+		right: 1px;
+		height: 3px;
+		background-color: #DDD;
+		text-align: right;
+	}
+	
+		.patroll-icon [class^="level"] span {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 3px;
+			width: 0;
+			transition-duration: 0.5s;
+		}
+	 
+	.patroll-icon .level-1 {
+		top: 1px;
+	}
+	
+		.patroll-icon .level-1 span {
+			background-color: #FFAD00;
+		}
+		
+		.patroll-icon.hold-1 .level-1 span {
+			width: 0 !important;
+		}
+	 
+	.patroll-icon .level-2 {
+		top: 6px;
+	}
+	
+		.patroll-icon .level-2 span {
+			background-color: #E46C16;
+		}
+		
+		.patroll-icon.hold-2 .level-2 span {
+			width: 0 !important;
+		}
+	 
+	.patroll-icon .level-3 {
+		top: 11px;
+	}
+	
+		.patroll-icon .level-3 span {
+			background-color: #C92B2B;
+		}
+		
+		.patroll-icon.hold-3 .level-3 span {
+			width: 0 !important;
+		}
+	 
+	.patroll-icon .level-4 {
+		top: 16px;
+	}
+	
+		.patroll-icon .level-4 span {
+			background-color: #575757;
+		}
+		
+		.patroll-icon.hold-4 .level-4 span {
+			width: 0 !important;
+		}
+	
+	
+
+
+.patroll-popup {
+	position: absolute;
+	background-color: white;
+	border: 1px solid #a8a8a8;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+	width: 220px;
+	height: 250px;
+	left: -250px;  /* - width - 30 */
+	top: -16px;
+	z-index: 100;
+	opacity: 1;
+	transition-duration: 0.5s;
+	box-sizing: border-box;
+	padding: 0.75em;
+}
+
+.patroll-popup.hidden {
+	opacity: 0;
+}
+
+
+	.patroll-popup .pin {
+		width: 14px;
+		height: 25px;
+		background: no-repeat center center;
+		background-size: 100% 100%;
+		right: -13px;
+		top: 18px;
+		position: absolute;
+	}
+
+	.patroll-popup .logo {
+		width: 112px;	/* 223px */
+		height: 34px;	/* 67px */
+		background: no-repeat center center;
+		background-size: 100% 100%;
+		margin-left: -0.7em;
+		margin-top: -0.6em;
+	}	
+		
+	.patroll-popup .unknown {
+		text-align: center;
+		font-size: 15px;
+		color: #666;
+		margin-top: 1.5em;
+	}
+
+		.patroll-popup .unknown strong {
+			display: block;
+			color: #000;
+		}
+	
+	.patroll-popup .report {
+		text-align: center;
+		font-size: 13px;
+		color: #666;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0.75em;
+	}
+	
+		.patroll-popup .report p {
+			margin-bottom: 0.5em;
+		}
+		
+		.patroll-popup .report .button {
+			border-radius: 0.5em;
+			padding: 0.35em;
+			background: #DDD;
+			color: black;
+			cursor: pointer;
+			user-select: none;
+		}
+		
+			.patroll-popup .report .button:hover {
+				color: white;
+				background: #c1404c;
+			}
+		
+	.patroll-popup .blank {
+		text-align: center;
+		font-size: 15px;
+		color: #666;
+		margin-top: 1.5em;
+	}
+	
+	.patroll-popup .button-show-profile {
+		border-radius: 0.5em;
+		padding: 0.35em;
+		background: #DDD;
+		color: black;
+		text-align: center;
+		font-size: 14px;
+		background: #EEE;
+		margin-top: 0.7em;
+		cursor: pointer;
+		user-select: none;
+	}
+	
+		.patroll-popup .button-show-profile:hover {
+			color: white;
+			background: #349556;
+		}
+		
+	.patroll-popup .levels {
+		margin-top: 0.25em;
+	}
+	
+		.patroll-popup .levels .level {
+			margin-bottom: 5px;
+			text-align: right;
+		}
+		
+			.patroll-popup .levels .level .count {
+				font-size: 11px;
+				float: left;
+			}
+			
+			.patroll-popup .levels .level h2 {
+				font-size: 11px;
+				margin-bottom: 2px;
+			}
+			
+			.patroll-popup .levels .level .track {
+				background: #eee;
+				height: 12px;
+			}
+			
+				.patroll-popup .levels .level .value {
+					display: inline-block;
+					height: 12px;
+				}
+				
+				.patroll-popup .levels .level-1 .value {
+					background-color: #FFAD00;
+				}
+				
+				.patroll-popup .levels .level-2 .value {
+					background-color: #E46C16;
+				}
+				
+				.patroll-popup .levels .level-3 .value {
+					background-color: #C92B2B;
+				}
+				
+				.patroll-popup .levels .level-4 .value {
+					background-color: #575757;
+				}
+		
+		
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+	
